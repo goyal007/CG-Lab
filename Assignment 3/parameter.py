@@ -136,43 +136,36 @@ def parameter():
     #case1
     nd=-1*diff_p_x
 
-    if nd==0:
-        return
-        
-    temp=(1)*(x0-xmin)/nd
-    if(nd>0):
-        tl=min(temp,tl)
-    else:  
-        te=max(te,temp)
+    if nd!=0:   
+        temp=(1)*(x0-xmin)/nd
+        if(nd>0):
+            tl=min(temp,tl)
+        else:  
+            te=max(te,temp)
     #case2
     nd=1*diff_p_x
-    if nd==0:
-        return
-    
-    temp=(-1)*(x0-xmax)/nd
-    if(nd>0):
-        tl=min(temp,tl)
-    else:  
-        te=max(te,temp)
+    if nd!=0:
+        temp=(-1)*(x0-xmax)/nd
+        if(nd>0):
+            tl=min(temp,tl)
+        else:  
+            te=max(te,temp)
     #case3
     nd=-1*diff_p_y
-    if nd==0:
-        return
-    
-    temp=(1)*(y0-ymin)/nd
-    if(nd>0):
-        tl=min(temp,tl)
-    else:  
-        te=max(te,temp)
+    if nd!=0:
+        temp=(1)*(y0-ymin)/nd
+        if(nd>0):
+            tl=min(temp,tl)
+        else:  
+            te=max(te,temp)
     #case4
     nd=1*diff_p_y
-    if nd==0:
-        return
-    temp=(-1)*(y0-ymax)/nd
-    if(nd>0):
-        tl=min(temp,tl)
-    else:  
-        te=max(te,temp)
+    if nd!=0:
+        temp=(-1)*(y0-ymax)/nd
+        if(nd>0):
+            tl=min(temp,tl)
+        else:  
+            te=max(te,temp)
 
     if te>tl:
         return 
